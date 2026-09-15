@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stick Hero</title>
+  <link rel="stylesheet" href="stick.css">
+  <link rel="stylesheet" href="../COMPARTILHADOS/nav.css">
+</head>
+<body>
+  <div class="container">
+    <div id="score"></div>
+    <canvas id="game" width="375" height="375"></canvas>
+    <div id="introduction">Segure a tela para esticar o bastão</div>
+    <div id="perfect">PONTUAÇÃO DUPLA</div>
+    <button id="restart">RECOMEÇAR</button>
+  </div>
+  <nav class="bottom-nav" aria-label="Navegação">
+  <a href="../02 - TORRE DE BLOCOS/index.html" class="tower ">
+    <i class="fa-solid fa-cubes"></i><span>Torre</span>
+  </a>
+  <a href="../03 - STICK HERO/index.html" class="stick active">
+    <i class="fa-solid fa-person-running"></i><span>Stick Hero</span>
+  </a>
+  <a href="../04 - PEDRA PAPEL TESOURA/index.html" class="rps ">
+    <i class="fa-solid fa-hand-scissors"></i><span>Jokenpô</span>
+  </a>
+  <button type="button" onclick="logout()">
+    <i class="fa-solid fa-right-from-bracket"></i><span>Sair</span>
+  </button>
+</nav>
+<script>
+function logout() {
+  sessionStorage.removeItem("loggedIn");
+  window.location.href = "login.html";
+}
+</script>
+  <script src="../COMPARTILHADOS/guard.js"></script>
+  <script src="stick.js"></script>
+</body>
+</html>
