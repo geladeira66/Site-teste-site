@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Torre de Blocos</title>
+  <link rel="stylesheet" href="tower.css">
+  <link rel="stylesheet" href="../COMPARTILHADOS/nav.css">
+</head>
+<body>
+  <div id="container">
+    <div id="game"></div>
+    <div id="score">0</div>
+    <div id="instructions">Clique ou pressione espaço para colocar o bloco</div>
+    <div class="game-over">
+      <h2>Game Over</h2>
+      <p>Você foi muito bem!</p>
+      <p>Clique ou pressione espaço para jogar novamente</p>
+    </div>
+    <div class="game-ready">
+      <div id="start-button">Começar</div>
+      <div></div>
+    </div>
+  </div>
+  <nav class="bottom-nav" aria-label="Navegação">
+  <a href="../02 - TORRE DE BLOCOS/index.html" class="tower active">
+    <i class="fa-solid fa-cubes"></i><span>Torre</span>
+  </a>
+  <a href="../03 - STICK HERO/index.html" class="stick ">
+    <i class="fa-solid fa-person-running"></i><span>Stick Hero</span>
+  </a>
+  <a href="../04 - PEDRA PAPEL TESOURA/index.html" class="rps ">
+    <i class="fa-solid fa-hand-scissors"></i><span>Jokenpô</span>
+  </a>
+  <button type="button" onclick="logout()">
+    <i class="fa-solid fa-right-from-bracket"></i><span>Sair</span>
+  </button>
+</nav>
+<script>
+function logout() {
+  sessionStorage.removeItem("loggedIn");
+  window.location.href = "login.html";
+}
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+  <script src="../COMPARTILHADOS/guard.js"></script>
+  <script src="tower.js"></script>
+</body>
+</html>
